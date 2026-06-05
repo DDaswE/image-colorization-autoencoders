@@ -1,0 +1,10 @@
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.pt
+*.pth
+*.pkl
+data/
+cifar-10-batches-py/
+models/
+outputs/
