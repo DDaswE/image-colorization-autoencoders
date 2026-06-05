@@ -4,16 +4,17 @@ Generative computer-vision workflow for grayscale-to-color image colorization us
 
 ## Preview
 
-<table>
-  <tr>
-    <td width="50%">
-      <img src="./preview_colorized_outputs.png" alt="Colorized horse image outputs" width="100%">
-    </td>
-    <td width="50%">
-      <img src="./preview_cvae_sampling_diversity.png" alt="CVAE sampling diversity" width="100%">
-    </td>
-  </tr>
-</table>
+<img src="./preview_colorized_outputs.png" alt="Colorized horse image outputs" width="100%">
+
+**Figure 1.** Grayscale horse inputs, ground-truth color images, and generated colorized outputs.
+
+<img src="./preview_cvae_sampling_diversity.png" alt="CVAE sampling diversity" width="100%">
+
+**Figure 2.** CVAE sampling diversity under different latent-variance settings.
+
+<img src="./preview_forward_diffusion.png" alt="Forward diffusion visualization" width="100%">
+
+**Figure 3.** Forward-diffusion visualization showing progressive noising of color images.
 
 ## Project summary
 
@@ -21,11 +22,11 @@ This project frames image colorization as a generative learning problem: given a
 
 ## Problem
 
-The assignment asks for models that perform image colourization:
+This project aims to build models that perform image colourization:
 
 > Given a greyscale image, predict the colour at each pixel. The task is difficult because it is ill-posed: a single greyscale image can have multiple equally valid colourings.
 
-The assignment uses CIFAR-10 to keep training manageable, begins with convolutional autoencoders, then compares that approach with conditional variational autoencoders. The workflow also emphasizes data cleaning, architecture selection, hyperparameter tuning, qualitative comparison of generated images, and discussion of ambiguity in generative vision tasks.
+The workflow uses CIFAR-10 to keep training manageable, begins with convolutional autoencoders, then compares that approach with conditional variational autoencoders. It also emphasizes data cleaning, architecture selection, hyperparameter tuning, qualitative comparison of generated images, and discussion of ambiguity in generative vision tasks.
 
 ## Data
 
