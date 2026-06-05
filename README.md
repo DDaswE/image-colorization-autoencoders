@@ -1,6 +1,6 @@
 # Image Colorization with Autoencoders
 
-Generative computer-vision workflow for grayscale-to-color image colorization using convolutional autoencoders, U-Net-style models, CVAEs, and diffusion-style denoising.
+Generative computer-vision workflow for grayscale-to-color image colorization using convolutional autoencoders, U-Net-style models, and conditional variational autoencoders.
 
 ## Preview
 
@@ -12,13 +12,9 @@ Generative computer-vision workflow for grayscale-to-color image colorization us
 
 **Figure 2.** CVAE sampling diversity under different latent-variance settings.
 
-<img src="./preview_forward_diffusion.png" alt="Forward diffusion visualization" width="100%">
-
-**Figure 3.** Forward-diffusion visualization showing progressive noising of color images.
-
 ## Project summary
 
-This project frames image colorization as a generative learning problem: given a grayscale image, predict plausible RGB color at each pixel. The notebook starts with convolutional autoencoders for regression-style colorization, then compares architectural and training changes including U-Net-style models, conditional variational autoencoders, and a bonus diffusion-style denoiser.
+This project frames image colorization as a generative learning problem: given a grayscale image, predict plausible RGB color at each pixel. The notebook starts with convolutional autoencoders for regression-style colorization, then compares architectural and training changes including U-Net-style models and conditional variational autoencoders.
 
 ## Problem
 
@@ -46,8 +42,6 @@ The workflow uses CIFAR-10 to keep training manageable, begins with convolutiona
 - KL-divergence and reconstruction-loss tradeoff
 - beta and learning-rate experiments for CVAE behavior
 - qualitative image-grid evaluation
-- simple forward diffusion visualization
-- one-step conditional denoiser for diffusion-style reconstruction
 
 ## Achievements
 
@@ -58,7 +52,6 @@ The workflow uses CIFAR-10 to keep training manageable, begins with convolutiona
 - compared CVAE sampling diversity under different `logvar`, beta, and learning-rate settings
 - identified instability in high-learning-rate CVAE training, including exploding and `nan` losses
 - saved 302 generated colorized samples into `colourized.npz`
-- implemented a bonus forward-diffusion visualization and a one-step conditional denoiser with training loss decreasing to 0.3127 by epoch 20
 
 ## Repository structure
 
@@ -69,8 +62,7 @@ The workflow uses CIFAR-10 to keep training manageable, begins with convolutiona
 | `colourized.npz` | Saved generated colorized image outputs |
 | `preview_colorized_outputs.png` | Grayscale input and predicted colorization examples |
 | `preview_cvae_sampling_diversity.png` | CVAE sample diversity under different latent variance settings |
-| `preview_forward_diffusion.png` | Forward diffusion/noising visualization |
 
 ## Skills practiced
 
-This project practices generative computer vision, convolutional autoencoders, U-Net-style image restoration, CVAE sampling, diffusion-style denoising, image preprocessing, and qualitative model evaluation.
+This project practices generative computer vision, convolutional autoencoders, U-Net-style image restoration, CVAE sampling, image preprocessing, and qualitative model evaluation.
