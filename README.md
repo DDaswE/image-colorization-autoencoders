@@ -2,6 +2,10 @@
 
 Generative computer-vision workflow for grayscale-to-color image colorization using convolutional autoencoders, U-Net-style models, and conditional variational autoencoders.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1YWRGSb55fxymbpC50D5WSulc4_xWoU-r?usp=sharing) [GitHub Repo](https://github.com/DDaswE/image-colorization-autoencoders)
+
+> Opening this notebook in Colab creates a working copy. The source notebook in GitHub remains unchanged unless a user already has write access to this repository.
+
 ## Preview
 
 <img src="./preview_colorized_outputs.png" alt="Colorized horse image outputs" width="100%">
